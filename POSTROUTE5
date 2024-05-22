@@ -1,0 +1,8 @@
+CREATE PROCEDURE EditPost
+    @post_id INT
+AS
+BEGIN
+    -- Update post logic here
+
+    SELECT 'Redirect back to the post view' AS Message;
+END;

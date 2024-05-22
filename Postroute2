@@ -1,0 +1,14 @@
+CREATE PROCEDURE AddNewPostForUser
+    @UserID INT,
+    @PostTitle NVARCHAR(100),
+    @PostContent NVARCHAR(MAX)
+AS
+BEGIN
+    INSERT INTO Posts (UserID, Title, Content, CreatedDate)
+    VALUES (@UserID, @PostTitle, @PostContent, GETDATE())
+
+    SELECT UserID, Title, Content, CreatedDate
+    FROM Posts
+    WHERE UserID = @UserID
+    ORDER BY CreatedDate DESC
+END

@@ -1,0 +1,3 @@
+SELECT post_title, post_content
+FROM posts
+WHERE user_id = {user_id};

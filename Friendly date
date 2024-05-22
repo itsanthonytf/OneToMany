@@ -1,0 +1,2 @@
+SELECT post_title, DATE_FORMAT(post_date, '%M %e, %Y') AS friendly_date
+FROM posts;

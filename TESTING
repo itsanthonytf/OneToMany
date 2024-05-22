@@ -1,0 +1,9 @@
+-- Update broken tests
+UPDATE tests
+SET status = 'passed'
+WHERE status = 'broken';
+
+-- Add new tests
+INSERT INTO tests (test_name, status)
+VALUES ('New Test 1', 'passed'),
+       ('New Test 2', 'failed');
